@@ -6,7 +6,7 @@ const Desc = (props) => {
     <>
       <SplideSlide>
         <img src={props.img} alt="" />
-        <div className="absolute bottom-4 bg-gradient-to-t from-gray-500 to-transparent h-[20%] w-full">
+        <div className="absolute bottom-0 bg-gradient-to-t from-gray-500 to-transparent h-[20%] w-full">
           <span>{props.children}</span>
           <a href={props.link} target="_blank" rel="noopener noreferrer">Cek Website</a>
         </div>
