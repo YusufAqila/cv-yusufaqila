@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import Desc from './Desc';
 import fotoProfil from "./assets/fotoSantai.jpg";
 import project1 from "./assets/project1.webp";
 import project2 from "./assets/project2.webp";
@@ -11,8 +11,6 @@ import project6 from "./assets/project6.webp";
 import "./index.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div className="flex m-4">
@@ -36,35 +34,19 @@ function App() {
           <p>OSBIT 2021-2023</p>
           <p>ROHIS 2021-2023</p>
           <h2>Project</h2>
-          <Splide aria-label="My Project Images">
-            <SplideSlide>
-              <div className="relative">
-                <img src={project6} alt="Image 1" className="w-[50vw]" />
-                <div className="absolute bottom-4 bg-gradient-to-t from-gray-500 to-transparent h-[20%] w-full">
-                  <span>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatum voluptatibus similique doloribus aspernatur
-                    eveniet, dolores atque tenetur aliquid animi, itaque, sequi
-                    quis nam architecto?
-                  </span>
-                </div>
-              </div>
-            </SplideSlide>
-            <SplideSlide>
-              <img src={project3} alt="Image 2" className="w-[50vw]" />
-            </SplideSlide>
-            <SplideSlide>
-              <img src={project4} alt="Image 2" className="w-[50vw]" />
-            </SplideSlide>
-            <SplideSlide>
-              <img src={project1} alt="Image 2" className="w-[50vw]" />
-            </SplideSlide>
-            <SplideSlide>
-              <img src={project5} alt="Image 2" className="w-[50vw]" />
-            </SplideSlide>
-            <SplideSlide>
-              <img src={project2} alt="Image 2" className="w-[50vw]" />
-            </SplideSlide>
+          <Splide aria-label="My Project Images" options={ {
+        rewind: true,
+        autoplay: true,
+        gap   : '1rem',
+        width: '50vw',
+      } }>
+
+            <Desc img={project6} link="https://osbit.rf.gd/shop">sadad</Desc>
+            <Desc img={project3} link="https://suaraanakpati.netlify.app">sadad</Desc>
+            <Desc img={project4} link="https://diastra-sman-1-pati.vercel.app/">sadad</Desc>
+            <Desc img={project1} link="https://clone-gform.vercel.app/">sadad</Desc>
+            <Desc img={project5} link="https://osbit.rf.gd">sadad</Desc>
+            <Desc img={project2} link="https://github.com/yusufaqila">sadad</Desc>
           </Splide>
           <a href={"https://github.com/yusufaqila"}>Akun GitHub</a>
           <a href={"https://suaraanakpati.netlify.app"} target={"_blank"}>
